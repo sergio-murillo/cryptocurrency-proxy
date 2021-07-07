@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CryptoCurrency.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:CryptoCurrency.WebApi.Controllers.BaseApiController">
+            <summary>
+            Base controller class
+            </summary>
+        </member>
+        <member name="T:CryptoCurrency.WebApi.Controllers.CoinsController">
+            <summary>
+            Controller class that contains all the methods about cryptocurrency to publish them to clients
+            </summary>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Controllers.CoinsController.GetGlobalCrypto">
+            <summary>
+            GET: api/coins/global
+            </summary>
+            <returns>
+            Cryptocurrency overview
+            </returns>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Controllers.CoinsController.GetAllCoins(CryptoCurrency.Application.DTOs.Coin.AllCoinsRequest)">
+            <summary>
+            GET: api/coins/all
+            </summary>
+            <param name="request">Pagination</param>
+            <returns>Information about all coins</returns>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Controllers.CoinsController.GetMarketForCoin(System.Int32)">
+            <summary>
+            GET: api/coins/market
+            </summary>
+            <param name="id">Coin Id</param>
+            <returns>Markets for specific coin</returns>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Controllers.CoinsController.GetExchangeForCoin(CryptoCurrency.Application.DTOs.Exchange.ExchangeForCoinRequest)">
+            <summary>
+            GET: api/coin/exchanges
+            </summary>
+            <param name="request">Coin Id</param>
+            <returns>Exchanges for specific coin</returns>
+        </member>
+        <member name="T:CryptoCurrency.WebApi.Extensions.AppExtensions">
+            <summary>
+            Class in charge of registering app extensions
+            </summary>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Extensions.AppExtensions.UseSwaggerExtension(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Register Swagger
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:CryptoCurrency.WebApi.Extensions.ServiceExtensions">
+            <summary>
+            Class in charge of registering service extensions
+            </summary>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Extensions.ServiceExtensions.AddSwaggerExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register Swagger
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Extensions.ServiceExtensions.AddControllersExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register controllers
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CryptoCurrency.WebApi.Extensions.ServiceExtensions.AddCorsExtension(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register policy cors
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="P:CryptoCurrency.WebApi.Extensions.ServiceExtensions.XmlCommentsFilePath">
+            <summary>
+            Get XML comments for Swagger
+            </summary>
+        </member>
+    </members>
+</doc>

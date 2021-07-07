@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: CryptoCurrency/CryptoCurrency.WebApi/Dockerfile
+    ports:
+      - "9001:443"
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "UseInMemoryDatabase=false"
+    restart: on-failure
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
