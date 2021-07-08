@@ -12,5 +12,7 @@ namespace CryptoCurrency.Application.Interfaces
         Task<List<GlobalCryptoResponse>> GetGlobalCryptoData();
 
         Task<AllCoinsResponse> GetAllCoins(AllCoinsRequest request);
+
+        Task<List<Ticker>> GetSpecificCoin(SpecificCoinRequest request);
     }
 }

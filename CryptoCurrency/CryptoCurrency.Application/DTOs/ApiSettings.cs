@@ -11,6 +11,8 @@
 
         public string Coins { get; set; }
 
+        public string Coin { get; set; }
+
         public string MarketForCoin { get; set; }
 
         public string AllExchanges { get; set; }

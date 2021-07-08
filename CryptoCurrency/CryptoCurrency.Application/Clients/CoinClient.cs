@@ -35,5 +35,15 @@ namespace CryptoCurrency.Application.Clients
         {
             return await _cryptoCurrencyService.GetAllCoins(request);
         }
+
+        /// <summary>
+        /// Get specific coin
+        /// </summary>
+        /// <param name="request">Coin Id</param>
+        /// <returns>Information about specific coins</returns>
+        public async Task<List<Ticker>> GetSpecificCoin(SpecificCoinRequest request)
+        {
+            return await _cryptoCurrencyService.GetSpecificCoin(request);
+        }
     }
 }

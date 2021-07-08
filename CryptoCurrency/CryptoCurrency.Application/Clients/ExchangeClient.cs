@@ -22,6 +22,7 @@ namespace CryptoCurrency.Application.Clients
 
         /// <summary>
         /// Get exchanges for specific coin
+        /// It obtains the markets of the currency and for each market it consults the exchange
         /// </summary>
         /// <param name="request">Coin id</param>
         /// <returns>Exchanges</returns>
@@ -42,7 +43,7 @@ namespace CryptoCurrency.Application.Clients
                 {
                     int id = Int32.Parse(exchangeItem.Id);
                     ExchangeResponse specificExchange = await _cryptoCurrencyService.GetSpecificExchange(new SpecificExchangeRequest { Id = id });
-                    List<ExchangePair> pairsExchangeFiltered = specificExchange.Pairs.Where(exchange => quotes.Contains(exchange.Quote)).ToList();
+                    List<ExchangePair> pairsExchangeFiltered = specificExchange.Pairs.Where(exchange => quotes.Contains(exchange.Quote) && exchange.Base != null).ToList();
                     exchangesFiltered.Add(pairsExchangeFiltered);
                 }
             }

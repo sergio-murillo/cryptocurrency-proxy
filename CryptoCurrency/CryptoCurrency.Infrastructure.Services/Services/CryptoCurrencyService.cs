@@ -88,7 +88,7 @@ namespace CryptoCurrency.Infrastructure.Services
         {
             try
             {
-                var url = $"{ApiSettings.BaseUrl}{ApiSettings.Coins}/?id={request.Id}";
+                var url = $"{ApiSettings.BaseUrl}{ApiSettings.Coin}/?id={request.Id}";
                 var response = await HttpClient.GetAsync(url);
                 Logger.LogInformation("Response GetSpecificCoin: " + response);
                 response.EnsureSuccessStatusCode();

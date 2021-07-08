@@ -55,6 +55,18 @@ namespace CryptoCurrency.WebApi.Controllers
         {
             return await _coinClient.GetAllCoins(request);
         }
+        
+        /// <summary>
+        /// GET: api/coins/coin
+        /// </summary>
+        /// <param name="request">Coin id</param>
+        /// <returns>Information about specific coin</returns>
+        [HttpGet]
+        [ActionName("coin")]
+        public async Task<List<Ticker>> GetSpecificCoin([FromQuery] SpecificCoinRequest request)
+        {
+            return await _coinClient.GetSpecificCoin(request);
+        }
 
         /// <summary>
         /// GET: api/coins/market
