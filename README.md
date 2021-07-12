@@ -1,9 +1,3 @@
-# Contents
-
-* [Global Requisites](#global-requisites)
-* [Install, Configure & Run](#install-configure--run)
-* [API Docs]("#swagger)
-
 # Global Requisites
 
 * asp .net 5
