@@ -47,5 +47,5 @@ docker-compose up -d
 # Swagger
 
 ```sh
-# To view Swagger you must access http://localhost:5000//swagger/index.html
+# To view Swagger you must access http://localhost:5000/swagger/index.html
 ```
