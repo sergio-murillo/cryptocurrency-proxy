@@ -1,3 +1,6 @@
+# Cryptocurrency-api
+This project is a proxy between the frontend application and coinlore
+
 # Global Requisites
 
 * asp .net 5
